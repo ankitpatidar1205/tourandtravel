@@ -15984,3 +15984,16 @@ button.gm-ui-hover-effect::after {
   height: 50px;
   border-radius: 10px;
 }
+
+
+@media (max-width: 767px) {
+  .productslidersection {
+    margin-right: 10px !important;
+  }
+  .headerDropdown__button{
+    padding: 0;
+  }
+}
+.productslidersection {
+  margin-right: 20px !important;
+} 
