@@ -214,7 +214,8 @@
 }
 
 :root {
-  --font-primary: "Segoe UI", DM sans, sans-serif;
+  /* --font-primary: "Segoe UI", DM sans, sans-serif; */
+   --font-primary: "Poppins", sans-serif;
 }
 
 :root {
@@ -1412,9 +1413,9 @@ button:focus {
 }
 
 .contactForm .form-input label {
-  position: absolute;
-  top: 20px;
-  left: 15px;
+  /* position: absolute; */
+  top: -10px;
+  left: 0px;
   color: black;
   z-index: 10;
   pointer-events: none;
@@ -1423,7 +1424,7 @@ button:focus {
 
 .contactForm .form-input label::before {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: -7px;
   right: -7px;
@@ -11827,9 +11828,9 @@ h6 {
 }
 
 @media (max-width: 991px) {
-  .lg\:d-none {
+  /* .lg\:d-none {
     display: none !important;
-  }
+  } */
 
   .lg\:d-inline-block {
     display: inline-block !important;
@@ -13368,7 +13369,7 @@ h6 {
 .map__content {
   width: 100%;
   height: 100%;
-  background-color: #a3a3a3;
+
 }
 
 .map__shape {
@@ -15251,7 +15252,7 @@ button.gm-ui-hover-effect::after {
   }
 
   .feed-section-header-title {
-    font-family: "Segoe UI", sans-serif;
+    font-family:  "Poppins", sans-serif;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.6px;
@@ -15291,7 +15292,7 @@ button.gm-ui-hover-effect::after {
 }
 
 .feed-section-header-title {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:  "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 550;
   font-style: normal;
@@ -15301,7 +15302,7 @@ button.gm-ui-hover-effect::after {
 }
 
 .feed-section-header-title1 {
-  font-family: "Segoe UI", sans-serif;
+  font-family:  "Poppins", sans-serif;
   font-size: 2rem !important;
   font-weight: 550;
   letter-spacing: 0px;
@@ -15309,7 +15310,7 @@ button.gm-ui-hover-effect::after {
 }
 
 .feed-section-header-title2 {
-  font-family: "Segoe UI", sans-serif;
+  font-family:  "Poppins", sans-serif;
   font-size: 0.8rem !important;
   font-weight: 550;
   letter-spacing: 0.8px;
@@ -15328,7 +15329,7 @@ button.gm-ui-hover-effect::after {
 .tour-price {
   grid-area: price;
   margin-right: 0.125rem;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:  "Poppins", sans-serif;
   font-size: 17px !important;
   font-weight: 500 !important;
   font-style: normal;
@@ -15536,7 +15537,7 @@ button.gm-ui-hover-effect::after {
 
 .popular-cities-container {
   margin: 30px 0 20px;
-  font-family: Arial, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 .popular-cities-container h2 {
@@ -15694,17 +15695,17 @@ button.gm-ui-hover-effect::after {
   color: white !important;
   background: rgba(84, 82, 82, 0.7);
   border-radius: 50%;
-  width: 30px !important;
-  height: 30px !important;
+  width: 25px !important;
+  height: 25px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 45% !important;
+  top: 60% !important;
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
-  font-size: 30px !important;
+  font-size: 22px !important;
   padding: 10px;
 }
 
@@ -15772,36 +15773,43 @@ button.gm-ui-hover-effect::after {
   margin-top: -50px;
 }
 
+/* category_slider */
+
 .slider__container2 {
   display: flex;
   overflow: hidden;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
-
+  margin-top: 20px;
+  margin-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
-
+.slider__item2 {
+  flex: 0 0 auto;
+  width: auto;
+  scroll-snap-align: start;
+}
 
 .slider__item2 button {
   padding: 8px;
-  width: 180px !important;
-  /* border: 1px solid gainsboro !important; */
+  border: 1px solid gainsboro !important;
   font-weight: 600;
+  width: auto;
 }
 
-.categorybtnicon i {
-  margin-right: 10px !important;
+.slider__item2 button:hover {
+  background-color: whitesmoke;
 }
 
-.categorybtnicon {
-  padding-block: 10px !important;
-
-}
-.slider_container2 {
-  display: flex;
-  overflow: hidden;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
+@media (max-width: 768px) {
+  .slider__item2 {
+    width: calc(100% / 2.5 - 10px);
+    margin-right: 10px;
+    width: auto;
+  }
+  .prev11{
+    display: none;
+  }
 
 }
 
@@ -15884,7 +15892,7 @@ button.gm-ui-hover-effect::after {
 
 /* new custmore review section css */
 .testimonial-section {
-  background-color: #6038e6;
+  background-color: #FC642D;
   color: #ffffff;
   padding: 60px 0;
   position: relative;
@@ -15892,21 +15900,24 @@ button.gm-ui-hover-effect::after {
 }
 
 .testimonial-header {
-  font-size: 2.5rem;
+  font-size: 55px;
   font-weight: bold;
   color: #ffffff;
+  font-weight: 550;
+  font-family: "Poppins", sans-serif;;
+  line-height: 1 !important;
 }
 
 .slickbtn-1,
 .slickbtn-2 {
-  background-color: #38213C;
+  background-color: white;
   border-radius: 50%;
   padding: 10px;
   text-align: center;
   font-weight: 700;
   font-size: 24px;
   margin: 10px;
-  color: #fff;
+  color: black;
 }
 
 .slickbtn-2 {
@@ -15914,8 +15925,8 @@ button.gm-ui-hover-effect::after {
 }
 
 .testimonial-card {
-  background-color: #332854;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 10px;
   text-decoration: none;
   /* width: 335px;
@@ -15925,7 +15936,7 @@ button.gm-ui-hover-effect::after {
   flex-direction: column;
   align-items: center;
   height: 540px;
-  border: 0.2px solid #444444;
+
 }
 
 .testimonial-card img {
@@ -15993,7 +16004,283 @@ button.gm-ui-hover-effect::after {
   .headerDropdown__button{
     padding: 0;
   }
+  .tabsMenu__tabs {
+    width: 170px !important;
+  }
+
+  .headerDropdown .tabsMenu__content {
+    padding: 10px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -90px;
+  }
+
+  .tabsMenu__content {
+    width: 800px !important;
+  }
+
+  .tabsMenu__content h5 {
+    color: #e42b6f !important;
+  }
 }
 .productslidersection {
   margin-right: 20px !important;
 } 
+
+
+.dropdown1 .dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdownnew1 {
+  border: 0;
+  box-shadow: none;
+  width: 95% !important;
+  margin-left: 5px !important;
+}
+
+
+
+
+/* near destination new page */
+.destination {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px auto;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.destination img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.destination:hover img {
+  transform: scale(1.05);
+}
+
+.destination span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #000; /* Customize the color of the navigation buttons */
+}
+
+.swiper-pagination-bullet-active {
+  background: #000; /* Customize the color of the active pagination bullet */
+}
+
+
+
+
+
+
+/* 17 juyly css  */
+
+.tabsMenu__content {
+  padding-top: 10px !important;
+  margin-left: 0 ;
+  padding-left: 20px;
+}
+
+
+.tabsMenu-list__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabsMenu-list__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.tabsMenu-list__item {
+  display: flex;
+  text-align: left;
+  /* padding: 5px; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+  margin-top: 20px;
+  border: 0;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .tabsMenu-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tabsMenu__tabs {
+    width: 135px !important;
+  }
+
+  .headerDropdown .tabsMenu__content {
+    padding: 10px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -90px;
+  }
+
+  .tabsMenu__content {
+margin-left: -120px !important;
+  }
+
+  .tabsMenu__content h5 {
+    color: #e42b6f !important;
+  }
+ 
+}
+@media (max-width: 968px){
+  .tabsMenu-list__item {
+    width: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .tabsMenu-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tabsMenu-list__item {
+    width: 100px;
+  }
+  .newdestbtn{
+    padding: 10px !important;
+  }
+}
+
+
+/* destination header */
+
+.headerDropdown .tabsMenu_tabs .tabs_controls>button.is-tab-el-active {
+  background-color:#e52a6e !important;
+  color: white !important;
+}
+
+
+.headerDropdown .tabsMenu{
+  width: 40%;
+}
+@media (max-width: 768px) {
+  .headerDropdown .tabsMenu{
+    width: 100%;
+  }
+  .headerDropdown .tabsMenu_tabs .tabs_controls>button{
+    padding: 10px !important;
+  }
+  .carousel-control-prev-icon{
+    display: none;
+  }
+  .carousel-control-next-icon{
+    display: none;
+  }
+  /* .swiper-button-next {
+    left: auto;
+    top: 70% !important;
+    font-size: 20px !important;
+    width: 27px !important;
+    height: 27px !important;
+}
+.swiper-button-prev{
+  top: 80% !important;
+    font-size: 15px !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+.swiper-button-next-category{
+  
+} */
+}
+
+/* logn page model */
+.modal-backdrop.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040; 
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  z-index: 1000; 
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(84, 82, 82, 0.7);
+  border-radius: 50%;
+  width: 22px !important;
+  height: 22px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:70% !important;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  font-size: 18px !important;
+  padding: 10px;
+}
+
+
+
+.headerDropdown .tabsMenu__tabs .tabs__controls>button+button {
+  border-top: 1px solid var(--color-border);
+}
+
+.headerDropdown .tabsMenu__tabs .tabs__controls>button:hover {
+  background-color:#e52a6e !important;
+  color: white !important;
+}
+
+:root {
+  /* --font-primary: "Segoe UI", DM sans, sans-serif; */
+  font-family: "Poppins", sans-serif !important;
+}
+.dropdown-item{
+  background-color: white !important;
+}
+
+
+.footer__main{
+  z-index: -1 !important;
+}
+.footer__bottomimg{
+  z-index: -1 !important;
+}
+.footer__images {
+  z-index: -1 !important;
+
+}
